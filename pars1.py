@@ -50,7 +50,7 @@ soup = bs4.BeautifulSoup(src, 'lxml')
 #     item_url = item.get('href')
 #     print(f'{item_text}: {item_url}')
 
-## metods:   .find_parent()   .find_harents()
+## metods:   .find_parent()   .find_parents()
 
 # post_div = soup.find(class_='post__text').find_parent()
 # print(post_div)
@@ -76,8 +76,9 @@ soup = bs4.BeautifulSoup(src, 'lxml')
 # prev_sib = soup.find(class_='post__date').find_previous_sibling()
 # print(prev_sib)  ## ne rabotaet
 
-the_text = soup.find('a', text=re.compile('Одежда'))
-print(the_text)
+# the_text = soup.find('a', text=re.compile('Одежда'))
+## поиск по слову в контексте
+# print(the_text)
 
 
 
