@@ -135,15 +135,15 @@ for category_name, category_href in all_prod.items():
                 )
             )
 
-    with open(f"data/{count}_{category_name}.csv", "a", encoding="UTF-8") as file:
+    with open(f"data/{count}_{category_name}.json", "a", encoding="UTF-8") as file:
         json.dump(product_info, file, indent=4, ensure_ascii=False)
 
     count += 1
-    print(f"итерация {count}. {category_name} записан...")
+    print(f"# итерация {count}. {category_name} записан...")
     iteration_count = iteration_count - 1
 
     if iteration_count == 0:
-        print("Забота завершена")
+        print("Работа завершена")
         break
 
     print(f"осталось итераций : {iteration_count}")
